@@ -1,5 +1,6 @@
 from django import forms
 
+
 class CharityForm(forms.Form):
     charity_name = forms.CharField()
     street_name = forms.CharField()

@@ -5,6 +5,11 @@
     <title>Title</title>
 </head>
 <body>
-{{ charityform }}
+<form method="get">
+    {% csrf_token %}
+    {%for student in students%}
+    {{ form }}
+</form>
+
 </body>
 </html>
