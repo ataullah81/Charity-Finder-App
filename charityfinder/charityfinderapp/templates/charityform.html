@@ -1,15 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<form method="get">
+{% extends 'base.html' %}
+<div class="container">
+{% block content %}
+    <style>
+    body {
+      display: flex;
+      align-items: left;
+      justify-content: center;
+      margin: 20 auto;
+      height: 20vh;
+      background-color: rgba(190, 179, 117, 0.425);;
+    }
+  </style>
+    <section>
+        <div class="container">
+            <div class="about">
+<form>
     {% csrf_token %}
-    {%for student in students%}
-    {{ form }}
+    <h1> Charity Places </h1>
+    {% for charity in charity %}
+        {{ charity }}
+    <ul>
+        <li>Name: {{ charity.charity_name }}</li>
+        <li>Street Name: {{ charity.street_name }}</li>
+        <li>Post Code: {{ charity.post_code }}</li>
+        <li>City Name: {{ charity.district_name }}</li>
+        <li>Phone No: {{ charity.contact_number }}</li>
+        <li>Other Info: {{ charity.extra_info }}</li>
+    </ul>
+    {% endfor %}
 </form>
 
-</body>
-</html>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+</div>
