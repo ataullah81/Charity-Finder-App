@@ -8,7 +8,13 @@ class Charityinformation(models.Model):
     post_code = models.CharField(max_length=20)
     district_name = models.CharField(max_length=120)
     contact_number = models.CharField(max_length=15)
-    extra_info = models.CharField(max_length=200)
+    website = models.CharField(max_length=100)
+    open_hours = models.TextField(max_length=400)
+    extra_info = models.TextField(max_length=400)
+
+    def __str__(self):
+        return self.charity_name
 
     class Meta:
         db_table = "charityinfo"
+

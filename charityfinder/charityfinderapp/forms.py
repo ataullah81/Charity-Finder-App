@@ -1,10 +1,9 @@
 from django import forms
 
+from charityfinderapp.models import Charityinformation
 
-class CharityForm(forms.Form):
-    charity_name = forms.CharField()
-    street_name = forms.CharField()
-    post_code = forms.CharField()
-    district_name = forms.CharField()
-    contact_number = forms.CharField()
-    extra_info = forms.CharField(required=False)
+
+class CharityForm(forms.ModelForm):
+    class Meta:
+        model = Charityinformation
+        fields = "__all__"
