@@ -10,7 +10,7 @@ header{
     position: fixed;
     top: 0;
     width: 100%;
-    background-image: linear-gradient(to bottom right,rgb(146, 201, 214), blue, rgb(0, 204, 255) );
+    background-image: linear-gradient(to bottom right,rgb(226, 70, 200), blue, rgb(255, 0, 255) );
 }
 li{
     list-style: none;
@@ -19,6 +19,7 @@ a{
     color: white;
     text-decoration: none;
     text-transform: uppercase;
+    text-size: 12px
 }
 a:hover{
     color: rgb(236, 14, 14);
