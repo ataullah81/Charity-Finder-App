@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from django.http import HttpResponse, request
 from .forms import CharityForm
 from .models import Charityinformation
 
@@ -18,3 +18,11 @@ def donate_func(request):
 def charity_func(request):
     charity = Charityinformation.objects.all()  # select * from table ;
     return render(request, "charityform.html", {"charity": charity})
+
+def search_charity_func(request):
+    if request.method == 'POST':
+        searched = request.POST['searched']
+        charityname = Charityinformation.objects.filter(charity_name__contains=searched)
+        return render(request, 'search_charity.html', {'searched':searched,'charityname':charityname})
+    else:
+        return render(request, 'search_charity.html', {})

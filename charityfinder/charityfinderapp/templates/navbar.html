@@ -16,8 +16,14 @@
                     <li class="nav-link"><a href="{% url 'charity' %}">Charity</a></li>
                     <li class="nav-link"><a href="{% url 'about' %}">About</a></li>
                     <li class="nav-link"><a href="{% url 'donate' %}">Donate</a></li>
-
                 </ul>
+                <div class="search-container" >
+                        <form method=POST action="{% url 'search_charity' %}">
+                            {% csrf_token %}
+                            <input type="text" placeholder="Search.." name="searched">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
             </nav>
 
         </div>

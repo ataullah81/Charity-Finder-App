@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+<div class="container">
+    {% block content %}
+    <style>
+    body {
+      display: flex;
+      align-items: left;
+      justify-content: center;
+      margin: 20 auto;
+      height: 20vh;
+      background-color: rgba(190, 179, 117, 0.425);;
+    }
+  </style>
+    <section>
+        <div class="container">
+            <div class="search">
+                {% if searched %}
+                    <h1>You searched for {{ searched }}</h1>
+                </br>
+                {% for charities in charityname %}
+                <strong>{{ charities }}</strong>
+                <li>Name: {{ charities.charity_name }}</li>
+                <li>Address: {{ charities.street_name }}</li>
+                <li>Post Code: {{ charities.post_code }}</li>
+                <li>City Name: {{ charities.district_name }}</li>
+                <li>Phone No: {{ charities.contact_number }}</li>
+                <li>Website: {{ charities.website }}</li>
+                <li>Opening hours: {{ charities.open_hours }}</li>
+                <li>Other Info: {{ charities.extra_info }}</li>
+                {% endfor %}
+                {% else %}
+                    <h1>You did not search anything</h1>
+                {% endif %}
+                </div>
+            </div>
+
+    </section>
+    {% endblock %}
+</div>

@@ -1,16 +1,13 @@
 {% extends 'base.html' %}
-
+<div class="container">
 {% block content %}
-
+<section>
+        <div class="container">
+            <div class="about">
     {% csrf_token %}
     <h1> Charity Places </h1>
     {% for charity in charity %}
-    <div class="card">
-        <div class="card-header">
-            {{ charity }}
-        </div>
-        <div class="card-body">
-        <p class="card-text">
+    <strong>{{ charity.charity_name }}</strong>
     <ul>
         <li>Name: {{ charity.charity_name }}</li>
         <li>Address: {{ charity.street_name }}</li>
@@ -21,9 +18,10 @@
         <li>Opening hours: {{ charity.open_hours }}</li>
         <li>Other Info: {{ charity.extra_info }}</li>
     </ul>
- </p>
-        </div>
-    </div>
-    {% endfor %}
 
+    {% endfor %}
+            </div>
+        </div>
+</section>
 {% endblock %}
+</div>
