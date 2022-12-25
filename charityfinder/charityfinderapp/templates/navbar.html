@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
      {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
@@ -21,7 +23,7 @@
                         <form method=POST action="{% url 'search_charity' %}">
                             {% csrf_token %}
                             <input type="text" placeholder="Search.." name="searched">
-                            <button type="submit"><i class="fa fa-search"></i></button>
+                            <button type="submit"><i class="fa fa-search" style="font-size:18px"></i></button>
                         </form>
                     </div>
             </nav>

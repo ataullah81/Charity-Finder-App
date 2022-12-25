@@ -12,17 +12,20 @@ def index_func(request):
 def about_func(request):
     return render(request, 'about.html', {})
 
+
 def donate_func(request):
     return render(request, 'donate.html', {})
+
 
 def charity_func(request):
     charity = Charityinformation.objects.all()  # select * from table ;
     return render(request, "charityform.html", {"charity": charity})
 
+
 def search_charity_func(request):
     if request.method == 'POST':
         searched = request.POST['searched']
         charityname = Charityinformation.objects.filter(charity_name__contains=searched)
-        return render(request, 'search_charity.html', {'searched':searched,'charityname':charityname})
+        return render(request, 'search_charity.html', {'searched': searched, 'charityname': charityname})
     else:
         return render(request, 'search_charity.html', {})

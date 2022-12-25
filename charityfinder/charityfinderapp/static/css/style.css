@@ -4,6 +4,12 @@
 }
 body{
     position: relative;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    margin: 20 auto;
+    height: 20vh;
+    background-color: rgba(29, 207, 243, 0.425);
 
 }
 header{
@@ -30,7 +36,7 @@ a:hover{
     margin: auto;
 }
 .nav-bar{
-    width: 950%;
+    width: 1000%;
     margin: auto;
     min-height: 70px;
     display: flex;
@@ -64,9 +70,8 @@ float: left;
   }
 .search-container button {
     float: right;
-    padding-top: 15px;
-    padding-bottom: 17px;
-    padding-right: 25px;
+    padding: 7px 10px;
+    padding-right: 6px;
     margin-top: 8px;
     margin-right: 16px;
     border: none;
