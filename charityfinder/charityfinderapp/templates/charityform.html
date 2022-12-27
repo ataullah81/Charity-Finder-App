@@ -3,20 +3,20 @@
 {% block content %}
 <section>
         <div class="container">
-            <div class="about">
+            <div class="charityform">
     {% csrf_token %}
     <h1> Charity Places </h1>
     {% for charity in charity %}
     <strong>{{ charity.charity_name }}</strong>
     <ul>
-        <li>Name: {{ charity.charity_name }}</li>
-        <li>Address: {{ charity.street_name }}</li>
-        <li>Post Code: {{ charity.post_code }}</li>
-        <li>City Name: {{ charity.district_name }}</li>
-        <li>Phone No: {{ charity.contact_number }}</li>
-        <li>Website: {{ charity.website }}</li>
-        <li>Opening hours: {{ charity.open_hours }}</li>
-        <li>Other Info: {{ charity.extra_info }}</li>
+        <li><strong>Name:</strong> {{ charity.charity_name }}</li>
+        <li><strong>Address:</strong> {{ charity.street_name }}</li>
+        <li><strong>Post Code:</strong> {{ charity.post_code }}</li>
+        <li><strong>City Name:</strong> {{ charity.district_name }}</li>
+        <li><strong>Phone No:</strong> {{ charity.contact_number }}</li>
+        <li><strong>Website:</strong> {{ charity.website }}</li>
+        <li><strong>Opening hours:</strong> {{ charity.open_hours }}</li>
+        <li><strong>Other Info:</strong> {{ charity.extra_info }}</li>
     </ul>
     {% endfor %}
             </div>

@@ -86,9 +86,10 @@ float: left;
   }
 
 }
-.youtube, .movies, .about, .home, .search{
+.about, .donate, .charityform, .home, .search{
     margin-top: 70px;
     border: 1px solid black;
+    background: rgb(255, 255, 255);
 }
 @media(max-width:1400px){
     .container{
