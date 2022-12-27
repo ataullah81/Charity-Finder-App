@@ -6,11 +6,10 @@
         <div class="container">
             <div class="search">
                 {% if searched %}
-                  <!--  <h1>You searched for {{ searched }}</h1></br> -->
+                 <!-- <h1>You searched for {{ searched }}</h1></br> -->
 
                 {% for charities in charityname %}
                 <h1><strong>{{ charities }}</strong></h1>
-
                 <li><strong>Name:</strong> {{ charities.charity_name }}</li>
                 <li><strong>Address:</strong> {{ charities.street_name }}</li>
                 <li><strong>Post Code:</strong> {{ charities.post_code }}</li>
@@ -20,9 +19,10 @@
                 <li><strong>Opening hours:</strong> {{ charities.open_hours }}</li>
                 <li><strong>Other Info:</strong> {{ charities.extra_info }}</li>
                 </br>
+                {% empty %}
+                No match found you searched for!!!
                 {% endfor %}
                 {% else %}
-                    <h1>You did not search anything</h1>
                 {% endif %}
                 </div>
             </div>
