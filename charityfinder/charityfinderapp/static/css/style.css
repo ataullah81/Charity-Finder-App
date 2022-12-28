@@ -21,13 +21,13 @@ header{
 li{
     list-style: none;
 }
-a{
+.navbar a{
     color: white;
     text-decoration: none;
     text-transform: uppercase;
     text-size: 12px
 }
-a:hover{
+.navbar a:hover{
     color: rgb(236, 14, 14);
 }
 

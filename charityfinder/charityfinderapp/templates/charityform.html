@@ -14,8 +14,8 @@
         <li><strong>Post Code:</strong> {{ charity.post_code }}</li>
         <li><strong>City Name:</strong> {{ charity.district_name }}</li>
         <li><strong>Phone No:</strong> {{ charity.contact_number }}</li>
-        <li><strong>Website:</strong> {{ charity.website }}</li>
-        <li><strong>Opening hours:</strong> {{ charity.open_hours }}</li>
+        <li><strong>Website:</strong><a href="{{ charity.website }}">{{ charity.website }}</a></li>
+        <li><strong>Opening hours:</strong>{{ charity.open_hours }}</li>
         <li><strong>Other Info:</strong> {{ charity.extra_info }}</li>
     </ul>
     {% endfor %}
