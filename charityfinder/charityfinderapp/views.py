@@ -29,3 +29,6 @@ def search_charity_func(request):
         return render(request, 'search_charity.html', {'searched': searched, 'charityname': charityname})
     else:
         return render(request, 'search_charity.html', {})
+
+def contact_func(request):
+    return render(request, 'contact.html', {})

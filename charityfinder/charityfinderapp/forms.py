@@ -7,3 +7,4 @@ class CharityForm(forms.ModelForm):
     class Meta:
         model = Charityinformation
         fields = "__all__"
+
