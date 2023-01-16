@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, request
 from .forms import CharityForm
+from .forms import ContactForm
 from .models import Charityinformation
 
 
@@ -31,4 +32,5 @@ def search_charity_func(request):
         return render(request, 'search_charity.html', {})
 
 def contact_func(request):
-    return render(request, 'contact.html', {})
+    form = ContactForm()
+    return render(request, 'contact.html', {'form':form})
