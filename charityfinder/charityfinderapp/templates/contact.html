@@ -4,13 +4,13 @@
 
     <section>
         <div class="container">
-            <div class="donate">
+            <div class="contact">
         Contact
                <form method="post" action=".">
                    {% csrf_token %}
-                   {{ form.as_p}}
+                   {{ contact.as_p}}
+                   <button>Submit</button>
                </form>
-                <button>Submit</button>
                 </div>
             </div>
 

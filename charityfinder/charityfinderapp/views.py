@@ -31,6 +31,12 @@ def search_charity_func(request):
     else:
         return render(request, 'search_charity.html', {})
 
+
 def contact_func(request):
-    form = ContactForm()
-    return render(request, 'contact.html', {'form':form})
+    if request.method == 'POST':
+        contact_from = ContactForm(request.POST)
+        if contact_from.is_valid():
+            print('the form is valid')
+    else:
+        contact_from = ContactForm()
+    return render(request, 'contact.html', {'contact': contact_from})

@@ -8,5 +8,5 @@ urlpatterns = [
     path('about', views.about_func, name='about'),
     path('donate', views.donate_func, name='donate'),
     path('search_charity', views.search_charity_func, name='search_charity'),
-    path('contact_charity', views.contact_func, name='contact'),
+    path('contact', views.contact_func, name='contact'),
 ]

@@ -99,7 +99,7 @@ float: left;
    text-align: center;
    opacity: 0.5;
 }
-.about, .donate, .charityform, .home, .search{
+.about, .donate, .charityform, .home, .search,.contact{
     margin-top: 44px;
     margin-bottom: 55px;
     border: 1px solid black;
