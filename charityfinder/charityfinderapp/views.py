@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse, request
-from .forms import CharityForm
+from django.http import HttpResponse, HttpResponseRedirect
+
 from .forms import ContactForm
 from .models import Charityinformation
+from django.core.mail import send_mail,BadHeaderError
 
 
 # Create your views here.
@@ -34,9 +35,18 @@ def search_charity_func(request):
 
 def contact_func(request):
     if request.method == 'POST':
-        contact_from = ContactForm(request.POST)
-        if contact_from.is_valid():
-            print('the form is valid')
+        contact_form = ContactForm(request.POST)
+        if contact_form.is_valid():
+            name = contact_form.cleaned_data['name']
+            email = contact_form.cleaned_data['email']
+            content = contact_form.cleaned_data['content']
+
+            send_mail('The contact form subject', 'This is the message', 'ataullah.behesti@gmail.com',
+                      ['ataullah.behesti@yahoo.com'])
+            return redirect('contact_func')
     else:
-        contact_from = ContactForm()
-    return render(request, 'contact.html', {'contact': contact_from})
+        contact_form = ContactForm()
+
+    return render(request, 'contact.html', {'contact_form': contact_form})
+
+

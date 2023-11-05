@@ -2,6 +2,7 @@ from django.urls import path
 
 from charityfinderapp import views
 
+
 urlpatterns = [
     path('charity', views.charity_func, name='charity'),
     path('index', views.index_func, name='index'),

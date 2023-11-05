@@ -8,8 +8,10 @@
         Contact
                <form method="post" action=".">
                    {% csrf_token %}
-                   {{ contact.as_p}}
-                   <button>Submit</button>
+                   {{ contact_form.as_p }}
+                   <div class="form-actions">
+                        <button type="submit">Send</button>
+                   </div>
                </form>
                 </div>
             </div>

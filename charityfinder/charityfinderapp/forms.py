@@ -8,6 +8,7 @@ class CharityForm(forms.ModelForm):
         model = Charityinformation
         fields = "__all__"
 
+
 class ContactForm(forms.Form):
     name = forms.CharField(max_length=255)
     email = forms.EmailField()
